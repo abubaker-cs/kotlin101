@@ -109,4 +109,17 @@ fun main() {
     println("Result: $resultDouble")
 
 
+    /**
+     * Comparison operators (==, !=, <, >, <=, >=)
+     */
+
+
+    /**
+     * Assignment operators (+=, -=, *=, /=, %=)
+     */
+
+    /**
+     * Increment & Decrement operators (++, --)
+     */
+
 }
