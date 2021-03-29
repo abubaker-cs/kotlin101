@@ -106,30 +106,48 @@ fun main() {
     val a = 5.0
     val b = 3
     resultDouble = a / b
-    println("Result: $resultDouble")
+    // println("Result: $resultDouble")
 
 
     /**
      * Comparison operators (==, !=, <, >, <=, >=)
      */
     val isEqual = 5 == 3
-    println("Is 5 == 3 : $isEqual")
+    // println("Is 5 == 3 : $isEqual")
 
     val isNotEqual = 5 != 5
-    println("Isn't 5=5? : $isNotEqual")
+    // println("Isn't 5=5? : $isNotEqual")
 
-    // String interpolation
-    println("Is -5 < 3 : ${-5 < 3}")
-    println("Is 5 > 3 : ${5 > 3}")
-    println("Is 5 <= 3 : ${5 <= 3}")
+    // Kotlin has a feature called String Interpolation.
+    // This feature allows you to directly insert a template expression inside a String.
+    // Template expressions are tiny pieces of code that are evaluated and
+    // their results are concatenated with the original String.
+    // A template expression is prefixed with $ symbol.
+    // Following are examples of String interpolation
+
+    // println("Is -5 < 3 : ${-5 < 3}")
+    // println("Is 5 > 3 : ${5 > 3}")
+    // println("Is 5 <= 3 : ${5 <= 3}")
 
     /**
      * Assignment operators (+=, -=, *=, /=, %=)
      */
+    var myNum = 5
+    myNum += 3
+    myNum *= 4
+    println("myNum is $myNum")
 
 
     /**
      * Increment & Decrement operators (++, --)
      */
+    myNum++
+    println("myNum++ is $myNum")
+    println("{myNum++} is ${myNum++}")
+    println("myNum after ++ is $myNum")
+    println("{++myNum} is ${++myNum}")
+
+    // myNum--
+    // println("myNum-- is $myNum")
 
 }
