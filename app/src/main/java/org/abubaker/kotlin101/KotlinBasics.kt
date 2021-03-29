@@ -9,21 +9,24 @@ fun main() {
     print("Hello $myName")
 
     /**
-     * This is
-     * a multiline
-     * comment.
+     * Types for Numbers:
+     *    1. Byte (8 bit)
+     *    2. Short (16 bit)
+     *    3. Int (32 bit)
+     *    4. Long (64 bit)
      */
-
-    // Byte (8 bit)
     val myByte: Byte = 13
-
-    // Short (16 bit)
     val myShort: Short = 125
-
-    // Int (32 bit)
     val myInt: Int = 123123123
+    val myLong: Long = 12_039_921_123_121_323_45
 
-    // Long (64 bit)
-    val myLong: Long = 12_039_921_123_121_323
+    /**
+     * Types for Float Numbers:
+     *    1. Float (32 bit)
+     *    2. Double (64 bit)
+     */
+    val myFloat: Float = 13.37F
+    val myDouble: Double = 3.14564564654853
+
 
 }
