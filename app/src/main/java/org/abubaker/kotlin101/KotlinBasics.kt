@@ -118,12 +118,15 @@ fun main() {
     val isNotEqual = 5 != 5
     println("Isn't 5=5? : $isNotEqual")
 
-
-    println("is 5 greater than 3 : ${5>3}")
+    // String interpolation
+    println("Is -5 < 3 : ${-5 < 3}")
+    println("Is 5 > 3 : ${5 > 3}")
+    println("Is 5 <= 3 : ${5 <= 3}")
 
     /**
      * Assignment operators (+=, -=, *=, /=, %=)
      */
+
 
     /**
      * Increment & Decrement operators (++, --)
