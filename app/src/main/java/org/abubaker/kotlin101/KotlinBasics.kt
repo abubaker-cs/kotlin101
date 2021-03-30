@@ -262,4 +262,9 @@ fun main() {
         in 15..20 -> println("just do it")
     }
 
+    /**
+     * While Loop
+     */
+
+
 }
