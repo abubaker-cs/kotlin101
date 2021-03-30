@@ -265,6 +265,55 @@ fun main() {
     /**
      * While Loop
      */
+    var data = 100
+    while (data >= 0) {
+        println("X: $data")
+        data -= 2
+    }
+
+    /**
+     * Do-When
+     */
+    var beta = 100
+    do {
+        println("Beta : $beta")
+        beta++
+    } while (beta <= 10)
+
+    var feltTemp = "cold"
+    var roomTemp = 10
+
+    while (feltTemp == "cold") {
+        roomTemp++
+        if (roomTemp >= 20) {
+            feltTemp = "comfy"
+            println("it's comfy now")
+        }
+    }
+
+    /**
+     * For Loops
+     */
+
+    // Last Output: 10
+    for (num in 1..10) {
+        println("Num: $num")
+    }
+
+    // Last Output: 9
+    for (i in 1 until 10) {
+        println("i: $i")
+    }
+
+    // Last Output: 2
+    for (j in 10 downTo 1 step 2) {
+        println("j: $j")
+    }
+
+    // Last Output: 2
+    for (k in 10.downTo(1).step(2)) {
+        println("k: $k")
+    }
 
 
 }
