@@ -135,19 +135,37 @@ fun main() {
     var myNum = 5
     myNum += 3
     myNum *= 4
-    println("myNum is $myNum")
+    // println("myNum is $myNum")
 
 
     /**
      * Increment & Decrement operators (++, --)
      */
     myNum++
-    println("myNum++ is $myNum")
-    println("{myNum++} is ${myNum++}")
-    println("myNum after ++ is $myNum")
-    println("{++myNum} is ${++myNum}")
+    // println("myNum++ is $myNum")
+    // println("{myNum++} is ${myNum++}")
+    // println("myNum after ++ is $myNum")
+    // println("{++myNum} is ${++myNum}")
 
     // myNum--
     // println("myNum-- is $myNum")
+
+    /**
+     * If Else Statement
+     */
+    var heightPerson1 = 370
+    var heightPerson2 = 570
+
+    if (heightPerson1 > heightPerson2) {
+        println("Person 1 > Person 2")
+    } else if (heightPerson1 < heightPerson2) {
+        println("Person 1 < Person 2")
+    } else {
+        println("They have equal")
+    }
+
+    /**
+     *
+     */
 
 }
