@@ -164,8 +164,65 @@ fun main() {
         println("They have equal")
     }
 
+    val age = 33
+    if (age >= 21) {
+        println("now you may drink in the US")
+    } else if (age >= 18) {
+        println("you may vote now")
+    } else if (age >= 16) {
+        println("You may drive now")
+    } else {
+        print("stay at home, you are too young")
+    }
+
+    var yourName = "Denis"
+    if (yourName == "Abubaker") {
+        println("Welcome home Abubaker")
+    } else {
+        println("Who are you?")
+    }
+
+    val isRainy = true
+    if (isRainy)
+        println("It's rainy")
+
     /**
-     *
+     * When
      */
+    val my_age = 13
+    when {
+        my_age >= 21 -> {
+            println("now you may drink in the US")
+        }
+        my_age >= 18 -> {
+            println("you may vote now")
+        }
+        my_age >= 16 -> {
+            println("You may drive now")
+        }
+        else -> print("stay at home, you are too young")
+    }
+
+    val season = 3
+    when (season) {
+        1 -> println("Spring")
+        2 -> println("Summer")
+        3 -> {
+            println("Fall")
+            println("Autumn")
+        }
+        4 -> println("Winter")
+        else -> println("Invalid Season")
+    }
+
+    val month = 1
+    when (month) {
+        in 3..5 -> println("Spring")
+        in 6..8 -> println("Summer")
+        in 9..11 -> println("Fall")
+        12, 1, 2 -> println("Winter")
+        else -> println("Invalid Season")
+    }
+
 
 }
