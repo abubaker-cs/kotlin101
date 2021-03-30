@@ -272,7 +272,10 @@ fun main() {
     }
 
     /**
-     * Do-When
+     * Do-While
+     * The do-while loop is similar to while loop except that it
+     * tests the condition at the end of the loop.
+     * This means that it will at least execute the body once
      */
     var beta = 100
     do {
@@ -293,6 +296,8 @@ fun main() {
 
     /**
      * For Loops
+     * A for-loop is used to iterate through ranges, arrays, collections, or anything
+     * that provides an iterator (You’ll learn about iterator, arrays, range
      */
 
     // Last Output: 10
@@ -313,6 +318,48 @@ fun main() {
     // Last Output: 2
     for (k in 10.downTo(1).step(2)) {
         println("k: $k")
+    }
+
+    /**
+     * Challenges
+     */
+
+    // Challenge 1
+    for (num in 1..10000) {
+
+        if (num == 9001) {
+            println("IT's Over 9000!!!, because the current value of num is $num")
+        }
+
+    }
+
+    // Challenge 2
+
+
+    /**
+     * Write a while loop that checks the humidity (not the humidityLevel).
+     *
+     * The variable humidityLevel starts at 80.
+     * The variable humidity is initialized with "humid".
+     *
+     * If it is "humid" then it should reduce the "humidityLevel" by 5
+     * and print "humidity decreased"
+     * Once the humidityLevel is below 60 it should print "it's comfy now"
+     * and set the humidity to "comfy"
+     */
+
+    var humidity = "humid"
+    var humidityLevel = 80
+
+    while (humidity == "humid") {
+
+        humidityLevel -= 5
+        println("humidity decreased by 5deg, and now it is at $humidityLevel")
+
+        if (humidityLevel < 60) {
+            humidity = "comfy"
+            println("it's comfy now")
+        }
     }
 
 
