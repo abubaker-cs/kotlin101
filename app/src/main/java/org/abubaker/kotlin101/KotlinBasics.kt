@@ -164,14 +164,24 @@ fun main() {
         println("They have equal")
     }
 
+    // Control Flows
+    // If Statements
     val age = 33
     if (age >= 21) {
         println("now you may drink in the US")
-    } else if (age >= 18) {
+    }
+    // Else If Statement - only executed if the if statement is not true
+    else if (age >= 18) {
         println("you may vote now")
-    } else if (age >= 16) {
+    }
+
+    // Else If Statement - only executed if the foregoing else if statement is not true
+    else if (age >= 16) {
         println("You may drive now")
-    } else {
+    }
+
+    // else is only executed if all of the foregoing statements weren't true
+    else {
         print("stay at home, you are too young")
     }
 
@@ -189,20 +199,11 @@ fun main() {
     /**
      * When
      */
-    val my_age = 13
-    when {
-        my_age >= 21 -> {
-            println("now you may drink in the US")
-        }
-        my_age >= 18 -> {
-            println("you may vote now")
-        }
-        my_age >= 16 -> {
-            println("You may drive now")
-        }
-        else -> print("stay at home, you are too young")
-    }
 
+
+    // Kotlin’s "when" expression is the replacement of the switch statement
+    // from other languages like C, C++, and Java.
+    // It is compact and more powerful than switch statements.
     val season = 3
     when (season) {
         1 -> println("Spring")
@@ -224,5 +225,41 @@ fun main() {
         else -> println("Invalid Season")
     }
 
+    // challenge - translate the if statement with the age to a when expression
+    // Note: Only the first match will be executed. Just like if statement.
+    val my_age = 11
+    when (my_age) {
+        // !in NOT in the range
+        !in 0..10 -> println("now you may drink in the US...")
+        in 18..20 -> println("you may vote now")
+        16, 17 -> println("You may drive now")
+        else -> print("stay at home, you are too young")
+    }
+
+    // is (keyword)
+    var y: Any = 13.37F
+    when (y) {
+        is Int -> println("$y is an Int")
+        !is Double -> println("$y is not a Double")
+        is String -> println("$y is a String")
+        else -> println("$y is none of the above")
+    }
+
+
+    val value = 1;
+    var x = "aah"
+
+    if (value > 5) {
+        if (value < 2) {
+            x = "oh"
+            println("X = $x")
+        }
+    }
+
+    var aged = 25
+    when (aged) {
+        in 21..100 -> println("Swiftey")
+        in 15..20 -> println("just do it")
+    }
 
 }
