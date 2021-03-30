@@ -362,5 +362,55 @@ fun main() {
         }
     }
 
+    /**
+     * Quiz 3
+     */
+
+    // Q1 - 1 3 5 7 9
+    for(i in 1 until 10 step 2) {
+        print("$i ")
+    }
+
+    println("\n=========")
+
+    // Q2 - 1234
+    var xy = 1
+    while(xy <= 10) {
+        print("$xy")
+        if (xy == 4){
+            xy = 10
+        }
+        xy++
+    }
+
+    println("\n=========")
+
+    // Q3 - 12
+    var z = 12
+    do {
+        print("$z ")
+    } while(z <= 10)
+
+    println("\n=========")
+
+    // Q4 - 100 Times
+    var counter = 0
+
+    for (x in 0..9) {
+        for (y in 0..9) {
+            counter++
+            println("$counter - Result = ${x * y}")
+        }
+    }
+
+    println("\n=========")
+
+    // 05
+    var Qx = 0
+    for (Qy in 0..9) {
+        Qx += Qy
+    }
+
+    println("x: $Qx")
 
 }
