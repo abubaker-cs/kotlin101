@@ -2,10 +2,12 @@ package org.abubaker.kotlin101
 
 /**
  * Understanding Functions in Kotlin
+ *
+ * Method vs Function
+ * Method - it is a function within a Class, i.e: onCreate()
+ * Function - it is placed OUTSIDE the class
  */
 fun main() {
-
-
 
     // Argument (what we are sending): (5, 3)
     // var result = addUp(5, 3)
@@ -29,7 +31,6 @@ fun myFunction() {
     println("Called from myFunction")
 }
 
-// Method - it is a function within a Class, i.e: onCreate()
 fun avg(a: Double, b: Double): Double {
     return (a + b) / 2
 }
