@@ -1,24 +1,47 @@
 package org.abubaker.kotlin101
 
+var b = 3
 fun main() {
-    // var denis: Person = Person("Denis", "Panjuta")
-    // var john = Person()
+
+    var b = 10
+    var denis: Person = Person("Denis", "Panjuta")
+    denis.hobby = "to skateboard"
+    denis.stateHobby()
+
+    var john = Person()
+    john.hobby = "to play video games"
+    john.stateHobby()
     /// var johnPeterson = Person(lastName = "Peterson")
 
-    var sample = MobilePhone("Android", "Samsung", "Galaxy S20 Ultra")
-    val iphone = MobilePhone("iOS", "Apple", "iPhone 12")
-    val galaxyS20 = MobilePhone("Android","Samsung", "Galaxy S20")
-    val mateXS = MobilePhone("Android", "Huawei", "Mate X S")
+    // var sample = MobilePhone("Android", "Samsung", "Galaxy S20 Ultra")
+    // val iphone = MobilePhone("iOS", "Apple", "iPhone 12")
+    // val galaxyS20 = MobilePhone("Android", "Samsung", "Galaxy S20")
+    // val mateXS = MobilePhone("Android", "Huawei", "Mate X S")
+
+    // this a is an argument
+    // myFunction(5)
+
+
 }
+
 
 class Person constructor(firstName: String = "John", lastName: String = "Doe") {
 
+    // Member Variables | Properties
+    var age: Int? = null
+    var fname = firstName
+    var lname = lastName
+    var hobby: String = "watch Netflix"
+
+
     // It will be initialized whenever the Person will be created
     init {
-        println(
-            "Initialized a new Person Object with:" +
-                    "\nFirst Name = $firstName \nLast Name = $lastName \n"
-        )
+        // println("Initialized a new Person Object with:" + "\nFirst Name = $firstName \nLast Name = $lastName \n")
+    }
+
+    // Member Functions | Methods
+    fun stateHobby() {
+        println("Hobby of $fname $lname is $hobby")
     }
 
 }
@@ -28,10 +51,24 @@ class MobilePhone constructor(osName: String, brand: String, model: String) {
     init {
         println(
             "$brand $model. \n" +
-            "Here the osName is $osName, " +
+                    "Here the osName is $osName, " +
                     "brand is $brand " +
                     "model is $model \n"
         )
     }
 
 }
+
+/**
+ * Scope
+ */
+
+// this a : Int is a parameter
+fun myFunction(a: Int) {
+
+    // a is a local variable which will store the info of the recieved arugment through parameter
+    var b = a
+    println("b is $b")
+}
+
+
