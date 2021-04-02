@@ -4,8 +4,10 @@ var b = 3
 fun main() {
 
     var b = 10
-    var denis: Person = Person("Denis", "Panjuta")
+    var denis: Person = Person("Denis", "Panjuta", 31)
     denis.hobby = "to skateboard"
+    denis.age = 35
+    println("${denis.fname} is ${denis.age} years old")
     denis.stateHobby()
 
     var john = Person()
@@ -29,14 +31,28 @@ class Person constructor(firstName: String = "John", lastName: String = "Doe") {
 
     // Member Variables | Properties
     var age: Int? = null
-    var fname = firstName
-    var lname = lastName
+
+    var fname: String? = null
+    var lname: String? = null
+
     var hobby: String = "watch Netflix"
 
 
     // It will be initialized whenever the Person will be created
     init {
+        this.fname = firstName
+        this.lname = lastName
         // println("Initialized a new Person Object with:" + "\nFirst Name = $firstName \nLast Name = $lastName \n")
+    }
+
+    // Member Secondary Constructor
+    constructor(
+        firstName: String,
+        lastName: String,
+        age: Int
+    ) : this(firstName, lastName) {
+        this.age = age
+        println("Initalized $firstName $lastName who is $age years old")
     }
 
     // Member Functions | Methods
