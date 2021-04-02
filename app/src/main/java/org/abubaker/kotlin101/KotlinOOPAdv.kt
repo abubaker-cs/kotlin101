@@ -54,6 +54,10 @@ class Car() {
      *
      * Value:
      * Value that you have given to a variable when you set it.
+     * - It is helpful inside getter/setter, because if we will use the property directly
+     *  then you will run into a "recursive call" which will generate a "stack overflow" error.
+     *
+     *
      */
 
 
