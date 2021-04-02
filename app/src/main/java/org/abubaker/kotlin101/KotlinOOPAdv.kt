@@ -49,16 +49,25 @@ class Car() {
      * Notes
      * =====
      *
-     * Field:
-     * It is a "backing field" which helps you to refer to properties inside the getter/setter methods.
-     *
-     * Value:
+     * 1. Value:
      * Value that you have given to a variable when you set it.
-     * - It is helpful inside getter/setter, because if we will use the property directly
-     *  then you will run into a "recursive call" which will generate a "stack overflow" error.
+     * We use value as the name of the setter parameter. This is the default convention in Kotlin
+     * but you’re free to use any other name if you want. The value parameter contains the value
+     * that a property is assigned to. For example, when you write user.name = "Elon Musk",
+     * the value parameter contains the assigned value "Elon Musk".
      *
+     * 2. Backing Field (field)
+     * Backing field helps you refer to the property inside the getter and setter methods.
+     * This is required because if you use the property directly inside the getter or setter then you’ll
+     * run into a recursive call which will generate a StackOverflowError.
+     *
+     * It is a "backing field" which helps you to refer to properties inside the getter/setter methods.
+     * It is helpful inside getter/setter, because if we will use the property directly
+     * then you will run into a "recursive call" which will generate a "stack overflow" error.
      *
      */
+
+// value
 
 
 }
