@@ -57,7 +57,7 @@ class Person constructor(firstName: String = "John", lastName: String = "Doe") {
 
     // Member Functions | Methods
     fun stateHobby() {
-        println("Hobby of $fname $lname is $hobby")
+        println("$fname $lname's hobby is $hobby")
     }
 
 }
