@@ -6,6 +6,9 @@ fun main() {
     /// var johnPeterson = Person(lastName = "Peterson")
 
     var sample = MobilePhone("Android", "Samsung", "Galaxy S20 Ultra")
+    val iphone = MobilePhone("iOS", "Apple", "iPhone 12")
+    val galaxyS20 = MobilePhone("Android","Samsung", "Galaxy S20")
+    val mateXS = MobilePhone("Android", "Huawei", "Mate X S")
 }
 
 class Person constructor(firstName: String = "John", lastName: String = "Doe") {
@@ -30,4 +33,5 @@ class MobilePhone constructor(osName: String, brand: String, model: String) {
                     "model is $model \n"
         )
     }
+
 }
