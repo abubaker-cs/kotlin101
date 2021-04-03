@@ -39,7 +39,7 @@ open class car(val name: String, val brand: String) {
 
 }
 
-class ElectricCar(name: String, brand: String, batteryLife: Double) : Car(name, brand) {
+class ElectricCar(name: String, brand: String, batteryLife: Double) : car(name, brand) {
 
 }
 
