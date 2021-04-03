@@ -42,13 +42,15 @@ open class car(val name: String, val brand: String) {
 
 class ElectricCar(name: String, brand: String, batteryLife: Double) : car(name, brand) {
 
+    var chargerType = "Type1"
+
     override var range = batteryLife * 5
 
     override fun drive(distance: Double) {
         println("Drove for $distance km on Electricity")
     }
 
-    fun drive(){
+    fun drive() {
         println("Drove for $range km on Electricity")
     }
 
@@ -58,11 +60,16 @@ fun main() {
     var audiA3 = car("A3", "Audi")
     var teslaS = ElectricCar("S-Model", "Tesla", 85.0)
 
+    teslaS.chargerType = "Type2"
     teslaS.extendRange(150.0)
 
+    teslaS.drive()
+
+    // Polymorphism: Ability to treat objects with traits in a common way
+    // Tesla has similar traits as it is inheriting from Car() and ElectricCar()
     audiA3.drive(200.0)
     teslaS.drive(220.0)
-    teslaS.drive()
+
 
 
 }
