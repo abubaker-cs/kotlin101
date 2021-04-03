@@ -70,7 +70,14 @@ fun main() {
     audiA3.drive(200.0)
     teslaS.drive(220.0)
 
+}
 
-
+//
+interface Drivable {
+    val maxSpeed: Double
+    fun drive(): String
+    fun brake() {
+        println("The drivable is braking")
+    }
 }
 
