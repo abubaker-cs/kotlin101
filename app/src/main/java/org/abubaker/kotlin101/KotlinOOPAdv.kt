@@ -15,7 +15,7 @@ fun main() {
 
 }
 
-class Car() {
+open class Car() {
 
     // An initialized Variable
     var Jeep: String = ""
