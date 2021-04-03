@@ -23,8 +23,9 @@ package org.abubaker.kotlin101
 // Open; It can be inherited
 // It is the Child class of the Vehicle() by also the Parent class of ElectricClass()
 open class car(val name: String, val brand: String) {
-    // Properties
-    var range: Double = 0.0
+
+    // open is required to override range property by child
+    open var range: Double = 0.0
 
     // Methods
     fun extendRange(amount: Double) {
@@ -33,7 +34,7 @@ open class car(val name: String, val brand: String) {
         }
     }
 
-    fun drive(distance: Double) {
+    open fun drive(distance: Double) {
         println("Drove for $distance km")
     }
 
@@ -41,13 +42,26 @@ open class car(val name: String, val brand: String) {
 
 class ElectricCar(name: String, brand: String, batteryLife: Double) : car(name, brand) {
 
+    override var range = batteryLife * 5
+
+    override fun drive(distance: Double) {
+        println("Drove for $distance km on Electricity")
+    }
+
+    fun drive(){
+        println("Drove for $range km on Electricity")
+    }
+
 }
 
 fun main() {
-    var myCar = car("A3", "Audi")
-    var myECar = ElectricCar("S-Model", "Tesla", 85.0)
+    var audiA3 = car("A3", "Audi")
+    var teslaS = ElectricCar("S-Model", "Tesla", 85.0)
 
+    teslaS.extendRange(150.0)
 
+    audiA3.drive(200.0)
+    teslaS.drive(220.0)
 
 }
 
