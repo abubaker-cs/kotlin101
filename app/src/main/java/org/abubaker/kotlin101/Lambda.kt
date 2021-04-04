@@ -5,7 +5,8 @@ fun main() {
     // addNumber(5,10)
 
     // Call for Lambda Expression
-    println(sum(5, 15))
+    // println(sum(5, 15))
+    shorterSum(13, 12)
 }
 
 
@@ -19,3 +20,9 @@ fun addNumber(a: Int, b: Int) {
 val sum: (Int, Int) -> Int = { a: Int, b: Int ->
     a + b
 }
+
+// Shorter
+val shorterSum = { a: Int, b: Int ->
+    println(a + b)
+}
+
